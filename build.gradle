@@ -1,0 +1,22 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+sourceCompatibility = 1.8
+mainClassName = "net.plantkelt.attackatdawn.Main"
+
+repositories {
+    jcenter()
+}
+
+version = "0.1"
+
+dependencies {
+	compile 'args4j:args4j:2.33'
+    testCompile 'junit:junit:4.+'
+}
+
+jar {
+    manifest {
+        attributes 'Implementation-Version': version
+    }
+}
